@@ -90,13 +90,12 @@ gulp.task('watch', function(){
   watchFiles('./src/img/**/*.*', ['img:copy']);
   watchFiles('./src/assets/**/*.*', ['asset:copy']);
   watchFiles('./src/sass/vendor/**/*.*', ['vendorcss:copy']);
-  watchFiles('./src/js/fonts/*.js', ['fontjs:copy'])
 });
 
 /**
  * Copy files
  */
-gulp.task('file:copy', ['img:copy', 'asset:copy', 'fontjs:copy']);
+gulp.task('file:copy', ['img:copy', 'asset:copy']);
 
 gulp.task('img:copy', function(){
   var stream = gulp.src('./src/img/**/*.*')
@@ -112,12 +111,6 @@ gulp.task('asset:copy', function(){
     .pipe(gulp.dest('./public/assets'));
   return stream;
 });
-
-gulp.task('fontjs:copy', function(){
-  var stream = gulp.src('./src/js/fonts/*.js')
-    .pipe(gulp.dest('./public/js'));
-  return stream;
-})
 
 /**
  * Browserify / Babel transpile and combine files
