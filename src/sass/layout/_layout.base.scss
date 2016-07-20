@@ -1,0 +1,93 @@
+%vertical-align-container {
+  display: table;
+  width: 100%;
+}
+
+%vertical-align-content {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.page-wrap {
+  overflow: hidden;
+}
+
+.content-wrap {
+  position: relative;
+  right: 0;
+}
+
+.row-constraint {
+  @extend .col-center;
+  max-width: 95rem;
+}
+
+.row-constraint-thin {
+  @extend .row-constraint;
+  max-width: 76rem;
+}
+
+.no-scroll,
+body.modal--is-open {
+  overflow: hidden;
+  position: relative;
+}
+
+.layout--align-left {
+  float: left;
+}
+
+.layout--align-right {
+  float: right;
+}
+
+// clearfix
+.cf {
+  clear: both;
+}
+
+.cf:before,
+.cf:after {
+  content: '';
+  display: table;
+}
+
+.cf:after {
+  clear: both;
+}
+
+.anchor {
+  top: -5rem;
+  display: block;
+  position: relative;
+  visibility: hidden;
+  // media queries
+  @include breakpoint($mobile-lg) {
+    top: 0;
+  }
+}
+
+.flex {
+  @extend %vertical-align-container;
+}
+
+.flex__content {
+  @extend %vertical-align-content;
+}
+
+.full-bg {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+
+.anchor {
+  position: relative;
+  height: 0;
+  top: -6rem;
+  // media queries
+  @include breakpoint($mobile-xsm) {
+    top: -5rem;
+  }
+}
+

@@ -1,0 +1,11 @@
+.DS_Store
+.dev/
+error_log
+
+node_modules/
+npm-debug.log
+.nodemonignore
+.sass-cache/
+
+#Ignore generated files
+public
