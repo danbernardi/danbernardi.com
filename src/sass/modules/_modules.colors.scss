@@ -1,42 +1,11 @@
-// default colors
-$white: #FFFFFF;
+// colors
 $black: #000000;
-
-// actionables
-$actionable: #0EA2B1;
-$actionable-hover: #008593;
-$alert-bg: #00AFB2;
-
-$actionable-dark: #47b2af;
-$actionable-dark-hover: #52ccc6;
-
-// solid colors
-$yellow: #F7FF29;
-$green: #83C96B;
-$teal: #2EA9AA;
-
-// ambient colors
-$dark-gray: #191919;
-$medium-gray: #585858;
-$light-gray: #F8F8F8;
-
-// text colors
-$dark: #2B2B2B;
-$aux: #b3b3b3;
-$body: #343434;
-
-$gray: #929292;
-
-
-
-// gradient mixin
-@mixin gradient($angle, $from, $to) {
- 	// fallback/image non-cover color
-  background-color: $from;
-
-  @if $angle == 'horizontal' {
-    background: linear-gradient(to right, $from 0%, $to 100%);
-  } @else if $angle == 'vertical' {
-    background: linear-gradient(to bottom, $from 0%, $to 100%);
-  }
-}
+$white: #FFFFFF;
+$lightgrey: #F7F7F7;
+$lightblue: #98A4AC;
+$body: #444;
+$darkgrey: #35383D;
+$darkestgrey: #313337;
+$blue: saturate(#4A9E9E, 20);
+$green: saturate(#9CBF54, 20);
+$pink: #ED7070;
