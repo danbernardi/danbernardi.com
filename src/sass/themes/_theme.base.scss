@@ -2,27 +2,6 @@
   color: $white;
 
   a {
-    color: $actionable-dark;
-  }
-
-  .typ--aux {
-    color: $aux;
-  }
-
-  .list--hash li:before {
-    background: rgba($aux, 0.35);
-  }
-
-  .btn,
-  .btn__icon {
     color: $white;
   }
-
-  .showcase__title {
-    color: $white;
-  }
-}
-
-.bg-gray {
-  background-color: $light-gray;
 }

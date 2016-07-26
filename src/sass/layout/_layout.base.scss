@@ -13,8 +13,11 @@
 }
 
 .content-wrap {
+  background: $white;
   position: relative;
-  right: 0;
+  width: 100%;
+  padding-left: 26rem;
+  z-index: 1;
 }
 
 .row-constraint {
