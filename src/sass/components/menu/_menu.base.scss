@@ -1,0 +1,47 @@
+.menu {
+  height: 100vh;
+  background: $darkgrey;
+  width: 26rem;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 2;
+}
+
+.menu__ul {
+  li a {
+    color: rgba($white, 0.6);
+    padding: 1rem 2rem;
+    display: block;
+    border-bottom: 0.1rem solid rgba($lightgrey, 0.1);
+
+    &.is-active {
+      color: $pink;
+    }
+
+    &:hover {
+      color: $white;
+      background-color: $darkestgrey;
+    }
+  }
+}
+
+.menu__logo {
+  a {
+    display: block;
+    background: $darkestgrey;
+    padding: 1rem 2rem;
+    border-bottom: 0.1rem solid rgba($lightgrey, 0.1);
+  }
+
+  img {
+    width: 2.5rem;
+    margin-right: 2rem;
+  }
+
+  span {
+    @include font(medium);
+    position: relative;
+    top: -0.7rem;
+  }
+}
