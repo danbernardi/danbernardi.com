@@ -1,11 +1,30 @@
 // colors
-$black: #000000;
-$white: #FFFFFF;
-$lightgrey: #F7F7F7;
-$lightblue: #98A4AC;
-$body: #444;
 $darkgrey: #35383D;
 $darkestgrey: #313337;
+$lightgrey: #F7F7F7;
+$lightblue: #98A4AC;
 $blue: saturate(#4A9E9E, 20);
 $green: saturate(#9CBF54, 20);
 $pink: #ED7070;
+$bodytext: #444;
+
+$white: #FFFFFF;
+$black: #000000;
+
+// fonts
+$bodyfont: Lora, Georgia, serif;
+$headerfont: Source Sans Pro, Helvetica, Arial, sans-serif;
+$sans-serif: "Helvetica Neue", Helvetica, Arial, sans-serif;;
+
+
+// gradient mixin
+@mixin gradient($angle, $from, $to) {
+  // fallback/image non-cover color
+  background-color: $from;
+
+  @if $angle == 'horizontal' {
+    background: linear-gradient(to right, $from 0%, $to 100%);
+  } @else if $angle == 'vertical' {
+    background: linear-gradient(to bottom, $from 0%, $to 100%);
+  }
+}

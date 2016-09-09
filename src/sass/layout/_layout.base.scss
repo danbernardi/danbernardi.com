@@ -1,47 +1,13 @@
-%vertical-align-container {
-  display: table;
-  width: 100%;
-}
-
-%vertical-align-content {
-  display: table-cell;
-  vertical-align: middle;
-}
-
-.page-wrap {
-  overflow: hidden;
-}
-
-.content-wrap {
-  background: $white;
-  position: relative;
-  width: 100%;
-  padding-left: 26rem;
-  z-index: 1;
-}
-
-.row-constraint {
-  @extend .col-center;
-  max-width: 95rem;
-}
-
-.row-constraint-thin {
-  @extend .row-constraint;
-  max-width: 76rem;
-}
-
-.no-scroll,
-body.modal--is-open {
-  overflow: hidden;
-  position: relative;
-}
-
-.layout--align-left {
+.layout--left {
   float: left;
 }
 
-.layout--align-right {
+.layout--right {
   float: right;
+}
+
+.layout--top {
+  vertical-align: top;
 }
 
 // clearfix
@@ -59,38 +25,7 @@ body.modal--is-open {
   clear: both;
 }
 
-.anchor {
-  top: -5rem;
-  display: block;
-  position: relative;
-  visibility: hidden;
-  // media queries
-  @include breakpoint($mobile-lg) {
-    top: 0;
-  }
+.layout--flex {
+  display: flex;
+  align-items: center;
 }
-
-.flex {
-  @extend %vertical-align-container;
-}
-
-.flex__content {
-  @extend %vertical-align-content;
-}
-
-.full-bg {
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: top center;
-}
-
-.anchor {
-  position: relative;
-  height: 0;
-  top: -6rem;
-  // media queries
-  @include breakpoint($mobile-xsm) {
-    top: -5rem;
-  }
-}
-

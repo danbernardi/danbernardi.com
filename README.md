@@ -1,2 +1,2 @@
 # danbernardi.com
-Testbed for reworked portfolio site
+My personal websites & portfolio. Build with React.
