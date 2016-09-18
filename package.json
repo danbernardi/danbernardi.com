@@ -1,7 +1,7 @@
 {
-  "name": "react-webpack-babel",
-  "version": "0.0.3",
-  "description": "React Webpack Babel Starter Kit",
+  "name": "danbernardi.com",
+  "version": "2.0.0",
+  "description": "Personal website and blog of Daniel Bernardi",
   "main": "''",
   "scripts": {
     "build": "webpack --config webpack.production.config.js --progress --profile --colors",
