@@ -16,39 +16,56 @@ const NavSheet = props => {
   }
 
   const generateNavItem = (item, itemIndex) => {
+    let active = false;
+
+    if (location.pathname === item.routeTo ||
+        location.pathname === '/home' && item.routeTo === '/') {
+      active = true;
+    }
 
     return (
       <li key={ itemIndex }>
         { item.routeTo ?
           <Link
-            className="nav__item"
+            className={ `nav__item ${active ? 'is-active' : ''}` }
+            target={ item.external ? '_blank' : '' }
             to={ item.routeTo }
-          >{ item.label }</Link>
+          >
+            { item.icon ? <span className={ `fa ${item.icon} pr1` }></span> : null }
+            { item.label }
+          </Link>
         :
           <span
-            className="nav__item"
+            className="nav__item sheet__trigger"
             onClick={ () => switchActiveSheet(item.target) }
-          >{ item.label }</span>
+          >
+            { item.icon ? <span className={ `fa ${item.icon} pr1` }></span> : null }
+            { item.label }
+          </span>
         }
       </li>
-    );
+    )
   };
+  
+  const initialStyles = { transition: 'transform 0.2s ease-in-out' };
 
-  let styles = {};
+  let transformStyles = {};
 
   if (activeSheetID.current === id) {
-    styles = { zIndex: 5, transform: 'translateX(0)' };
+    // if sheet is currently active
+    transformStyles = { transform: 'translateX(0)' };
   } else if (activeSheetID.previous.indexOf(id) !== -1) {
-    styles = { zIndex: 5, transform: 'translateX(-100%)' };
+    // if sheet has been active in the past
+    transformStyles = { transform: 'translateX(-100%)' };
   } else {
-    styles = { zIndex: 1, transform: 'translateX(100%)' };
+    // if sheet isn't and hasn't yet been active
+    transformStyles = { transform: 'translateX(100%)' };
   }
-    
 
   return (
-    <div className="nav__sheet" style={ styles }>
+    <div className="nav__sheet" style={ Object.assign(initialStyles, transformStyles) }>
       
-      { id === 'home' ?
+      { id === 'index' ?
         <div className="menu__top menu__logo">
           <Link to="/">
             <img src={ require('../assets/img/logo.svg') } alt="Logo badge" />

@@ -21,6 +21,10 @@
   border-bottom: 0.1rem solid rgba($lightgrey, 0.1);
   cursor: pointer;
   display: block;
+
+  &:hover {
+    background: darken($darkestgrey, 2);
+  }
 }
 
 .menu__logo {

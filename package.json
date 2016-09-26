@@ -18,6 +18,7 @@
   "dependencies": {
     "autoprefixer": "^6.4.1",
     "lost": "^7.1.0",
+    "moment": "^2.15.1",
     "node-sass": "^3.9.2",
     "react": "15.3.0",
     "react-dom": "15.3.0",
