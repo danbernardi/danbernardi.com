@@ -1,5 +1,5 @@
 .menu {
-  width: 32rem;
+  width: 30rem;
   background: $darkgrey;
   height: 100vh;
   color: $white;
@@ -7,10 +7,6 @@
   left: 0;
   top: 0;
   overflow: hidden;
-
-  a {
-    color: $white;
-  }
 }
 
 .menu__top {
@@ -30,6 +26,7 @@
 .menu__logo {
   .menu__title {
     padding-left: 4rem;
+    color: $white;
   }
 
   img {

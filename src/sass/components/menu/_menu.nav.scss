@@ -2,7 +2,7 @@
   position: absolute;
   width: 100%;
   background: $darkgrey;
-  height: 70vh;
+  height: 70.6vh;
   overflow-y: auto;
 }
 
@@ -29,9 +29,15 @@
   &:hover {
     color: $white;
     background: $darkestgrey;
+
+    .fa,
+    &.sheet__trigger:before {
+      color: $green;
+    }
   }
 
   &.is-active {
+    @include font(medium);
     color: $pink;
   }
 }
