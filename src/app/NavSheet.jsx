@@ -48,7 +48,6 @@ const NavSheet = props => {
   };
   
   const initialStyles = { transition: 'transform 0.2s ease-in-out' };
-
   let transformStyles = {};
 
   if (activeSheetID.current === id) {

@@ -8,7 +8,7 @@ const App = (props) => {
   return (
     <div className="cf">
       <Menu />
-      <div className="content">
+      <div className="content-wrap">
         { children }
       </div>
     </div>
