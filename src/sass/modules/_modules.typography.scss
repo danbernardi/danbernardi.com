@@ -1,15 +1,15 @@
 @mixin font($weight) {
   @if $weight == 'light' {
-    font-family: "proxima-nova", sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
     font-weight: 300;
   } @else if $weight == 'book' {
-    font-family: "proxima-nova", sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
     font-weight: 400;
   } @else if $weight == 'medium' {
-    font-family: "proxima-nova", sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
     font-weight: 600;
   } @else if $weight == 'bold' {
-    font-family: "proxima-nova", sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
     font-weight: 700;
   }
 }
@@ -100,7 +100,6 @@ p {
 
 a {
   text-decoration: none;
-  transition: color 0.2s ease-in-out;
 }
 
 em {
@@ -115,6 +114,10 @@ sup {
 blockquote {
   padding-left: 3rem;
   border-left: 0.1rem solid $darkgrey;
+}
+
+.typ--heading {
+  font-family: 'Lora', serif;
 }
 
 .typ--underline {
